@@ -114,7 +114,7 @@ export default function Resume() {
             Want a detailed overview of my skills and background?
           </p>
           <a
-            href="/Yogesh_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Yogesh_Resume.pdf`}
             className="btn btn-primary"
             download
           >

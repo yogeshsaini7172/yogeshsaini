@@ -127,7 +127,7 @@ export default function Hero() {
               </div>
 
               <div className="hero-card-avatar">
-                <img src="/profile.jpg" alt="Yogesh Saini" />
+                <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Yogesh Saini" />
               </div>
               <div className="hero-card-name">Yogesh Saini</div>
               <div className="hero-card-role">Software Engineer · Android & ML</div>

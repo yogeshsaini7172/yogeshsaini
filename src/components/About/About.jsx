@@ -50,7 +50,7 @@ export default function About() {
           <div className="about-left reveal-left">
             <div className="about-profile-card">
               <div className="about-avatar">
-                <img src="/profile.jpg" alt="Yogesh Saini" />
+                <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Yogesh Saini" />
               </div>
               <div className="about-profile-name">Yogesh Saini</div>
               <div className="about-profile-role">Software Engineer · CSE Student</div>

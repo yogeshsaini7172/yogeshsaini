@@ -1,0 +1,153 @@
+/* =============================================
+   RESUME SECTION
+   ============================================= */
+
+.resume-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-full);
+  padding: 0.4rem;
+  width: fit-content;
+  margin: 2.5rem 0 3rem;
+}
+
+.resume-tab {
+  padding: 0.6rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  background: transparent;
+  border: none;
+  color: var(--clr-text-secondary);
+  font-family: var(--font-primary);
+}
+
+.resume-tab.active {
+  background: var(--clr-orange);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(212,98,42,0.4);
+}
+
+.resume-tab:hover:not(.active) {
+  color: var(--clr-text-primary);
+}
+
+/* Timeline */
+.resume-timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.resume-card {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.resume-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--clr-orange), var(--clr-amber));
+  border-radius: 0 0 0 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.resume-card:hover {
+  border-color: var(--clr-orange);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.resume-card:hover::before {
+  opacity: 1;
+}
+
+.resume-card-date {
+  display: inline-block;
+  background: var(--clr-orange-glow);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-orange-bright);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.resume-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--clr-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.resume-card-org {
+  font-size: 0.88rem;
+  color: var(--clr-orange);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.resume-card-desc {
+  font-size: 0.88rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.7;
+}
+
+.resume-card-desc ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.resume-card-desc ul li {
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.resume-card-desc ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--clr-orange);
+  font-weight: 700;
+}
+
+/* Download CV */
+.resume-download {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.resume-download-text {
+  color: var(--clr-text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .resume-timeline {
+    grid-template-columns: 1fr;
+  }
+  .resume-tabs {
+    flex-wrap: wrap;
+    border-radius: var(--radius-lg);
+  }
+}
